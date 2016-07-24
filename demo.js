@@ -6,6 +6,7 @@ var config = {
     mockPath: __dirname,
     proxies: {
         '/api': {
+            prefixPath: '/api',
             host: '127.0.0.1:6000',
         },
         '/userapi': {
