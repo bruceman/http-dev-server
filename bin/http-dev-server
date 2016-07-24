@@ -1,0 +1,8 @@
+#!/usr/bin/node
+var server = require('../index');
+var config = {
+    hostname : '0.0.0.0',
+    port: '8000',
+    webPath: [process.cwd()],
+}
+server(config)

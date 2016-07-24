@@ -1,0 +1,35 @@
+{
+  "name": "http-dev-server",
+  "version": "0.1.0",
+  "description": "A simple http server for develop purpose, support reserve proxy and mock API request",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruceman/http-dev-server.git"
+  },
+  "bin": {
+    "http-dev-server": "./bin/http-dev-server"
+  },
+  "keywords": [
+    "nodejs",
+    "http-server",
+    "http-dev-server",
+    "http",
+    "proxy",
+    "mock"
+  ],
+  "author": "bruceman,sean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bruceman/http-dev-server/issues"
+  },
+  "homepage": "https://github.com/bruceman/http-dev-server#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-http-proxy": "^0.6.0",
+    "underscore": "^1.8.3"
+  }
+}

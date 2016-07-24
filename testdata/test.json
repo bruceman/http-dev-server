@@ -1,0 +1,12 @@
+[
+	{
+		"id": 1,
+		"name": "javascript in action",
+		"price": 35
+	},
+	{
+		"id": 2,
+		"name": "nodejs in action",
+		"price": 25
+	}
+]
