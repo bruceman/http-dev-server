@@ -13,25 +13,40 @@ http-dev-server
 
 #Script Usage:
 ````js
-server = require('http-dev-server')   
-server(option, callback)  
+http-dev-server -f config-sample.js
 ````
 ##Option
 ````js
 var config = {
-    hostname : '0.0.0.0',
-    port: '80',
+    hostname: '0.0.0.0',
+    port: '3000',
     webPath: [__dirname],
-    proxies:{
-        '/speapi':{
-            host: 'api.demo.com',
-            headers:{
-                host: 'api.demo.com'
+    mockPath: __dirname,
+    proxies: {
+        '/api': {
+            host: '127.0.0.1:6000',
+        },
+        '/userapi': {
+            host: '127.0.0.1:7000',
+            headers: {
+                host: 'api.examples.com'
+            }
+        }
+    },
+    mocks: {
+        '/api/item/list': 'testdata/test.json',
+        '/api/item/1': function(req, res) {
+            res.json({ code: 0, data: { id: 1, name: "javascript in action" } });
+        },
+        '/api/cart': {
+            'get': 'testdata/test.json',
+            'post': function(req, res) {
+                res.send("add cart successful");
             }
         }
     }
-}
+};
 ````
 
 ##Refs:
-This repository is forked from https://github.com/suxiaoxin/http-server-dev
+This repository modified from https://github.com/suxiaoxin/http-server-dev

@@ -93,12 +93,15 @@ module.exports =  function(config, middleware){
         app.use( key ,router)
     })
 
-    //static resource
-    config.webPath.forEach(function(wp){
-        app.use(express.static(wp))
-    })
-
-
+    //static resources
+    if (_.isArray(config.webPath)) {
+        config.webPath.forEach(function(wp){
+            app.use(express.static(wp))
+        });
+    } else if (_.isString(config.webPath)) {
+         app.use(express.static(config.webPath));
+    }
+    
 
     if(typeof middleware === 'function'){
         middleware(app, express);

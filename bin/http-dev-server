@@ -1,8 +1,20 @@
-#!/usr/bin/node
-var server = require('../index');
-var config = {
-    hostname : '0.0.0.0',
-    port: '8000',
-    webPath: [process.cwd()],
+#!/usr/bin/env node
+var path = require("path");
+var args = require("args");
+
+args.option("file", "the custom config file");
+//parse arguments
+var options = args.parse(process.argv);
+
+if (!options.file) {
+	args.showHelp();
+	exit(1);
 }
+
+var filePath = path.join(process.cwd(), options.file);
+console.log("use config file: " + filePath);
+
+var server = require('../index');
+var config = require(filePath);
+
 server(config)
