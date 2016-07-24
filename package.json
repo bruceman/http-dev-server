@@ -1,6 +1,6 @@
 {
   "name": "http-dev-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple http server for develop purpose, support reserve proxy and mock API request",
   "main": "index.js",
   "scripts": {
