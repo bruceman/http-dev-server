@@ -8,7 +8,6 @@ npm install http-dev-server
 #Command
 ````js
 npm install -g http-dev-server   
-http-dev-server
 ````
 
 #Script Usage:
@@ -49,4 +48,5 @@ var config = {
 ````
 
 ##Refs:
+The function params "req, res" are defined in express: http://expressjs.com/en/4x/api.html
 This repository modified from https://github.com/suxiaoxin/http-server-dev
