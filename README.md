@@ -7,12 +7,12 @@ A simple http server for develop purpose, support reserve proxy and mock API req
 npm install -g http-dev-server   
 ````
 
-##Usage:
+##Usage
 ````js
 http-dev-server -f config-sample.js
 ````
 
-##Config Sample:
+##Config Sample
 ````js
 module.exports = {
     hostname: '0.0.0.0',
@@ -45,6 +45,6 @@ module.exports = {
 };
 ````
 
-##Refs:
+##Refs
 - The function params "req, res" are defined in express: http://expressjs.com/en/4x/api.html
 - This repository modified from https://github.com/suxiaoxin/http-server-dev
