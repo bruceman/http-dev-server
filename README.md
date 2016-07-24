@@ -2,19 +2,17 @@
 A simple http server for develop purpose, support reserve proxy and mock API request
 
 
-#Install
-npm install http-dev-server
-
-#Command
+##Install
 ````js
 npm install -g http-dev-server   
 ````
 
-#Script Usage:
+##Usage:
 ````js
 http-dev-server -f config-sample.js
 ````
-##Option
+
+##Sample Config:
 ````js
 var config = {
     hostname: '0.0.0.0',
