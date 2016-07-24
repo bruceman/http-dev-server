@@ -12,9 +12,9 @@ npm install -g http-dev-server
 http-dev-server -f config-sample.js
 ````
 
-##Sample Config:
+##Config Sample:
 ````js
-var config = {
+module.exports = {
     hostname: '0.0.0.0',
     port: '3000',
     webPath: [__dirname],
