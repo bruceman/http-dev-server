@@ -1,15 +1,25 @@
 # http-dev-server
-A simple http server for develop purpose, support reserve proxy and mock API request
+A simple http server for develop purpose, support rewrite request , mock request response and serve basic static resources.
 
 
 ##Install
-````js
+Install on global path
+````shell
 npm install -g http-dev-server   
+````
+Or install as a development dependency
+````shell
+npm install --save-dev http-dev-server   
 ````
 
 ##Usage
-````js
+Run server by global command
+````shell
 http-dev-server -f config-sample.js
+````
+Or config npm script and run server by npm (for example: {"server": "http-dev-server -f ./dev-server-config.js}")
+````shell
+npm run server
 ````
 
 ##Config Sample
@@ -17,11 +27,12 @@ http-dev-server -f config-sample.js
 module.exports = {
     hostname: '0.0.0.0',
     port: '3000',
-    webPath: [__dirname],
+    webPath: __dirname,
     mockPath: __dirname,
+    logLevel: 'debug',
     proxies: {
         '/api': {
-            host: '127.0.0.1:6000',
+            host: 'api.examples.com',
         },
         '/userapi': {
             host: '127.0.0.1:7000',
@@ -43,6 +54,12 @@ module.exports = {
         }
     }
 };
+````
+
+##Test
+Run project test using mocha
+````shell
+npm run test   
 ````
 
 ##Refs
