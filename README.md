@@ -22,7 +22,8 @@ Or config npm script and run server by npm (for example: {"server": "http-dev-se
 npm run server
 ````
 
-##Config Sample
+##Config Sample 
+the content of config-sample.js
 ````js
 module.exports = {
     hostname: '0.0.0.0',

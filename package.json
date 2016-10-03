@@ -1,6 +1,6 @@
 {
   "name": "http-dev-server",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A simple http server for develop purpose, support rewrite request, mock response data and serve static resources",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "mock"
   ],
   "author": "bruceman",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bruceman/http-dev-server/issues"
   },
