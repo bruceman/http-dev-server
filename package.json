@@ -1,7 +1,7 @@
 {
   "name": "http-dev-server",
   "version": "0.2.0",
-  "description": "A simple http server for develop purpose, support reserve proxy and mock API request",
+  "description": "A simple http server for develop purpose, support rewrite request, mock response data and serve static resources",
   "main": "index.js",
   "scripts": {
     "test": "mocha test"

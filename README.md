@@ -1,5 +1,5 @@
 # http-dev-server
-A simple http server for develop purpose, support rewrite request , mock request response and serve basic static resources.
+A simple http server for develop purpose, support rewrite request, mock response data and serve static resources.
 
 
 ##Install
