@@ -91,6 +91,7 @@ module.exports =  function(config){
         logger.info("[proxy] %s - > %s", key, host);
         
         router.all('*', httpProxy(host, {
+            reqBodyEncoding: null,
             decorateRequest: function(req) {
                 var path = req.path;
 
