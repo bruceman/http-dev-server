@@ -1,4 +1,5 @@
 var httpProxy = require('express-http-proxy');
+var serveIndex = require('serve-index');
 var express = require('express');
 var _       = require('underscore');
 var app = express();
@@ -117,6 +118,7 @@ module.exports =  function(config){
     //static resources
     if (config.webPath) {
         app.use(express.static(config.webPath));
+        app.use(serveIndex(config.webPath, {icons: true}));
     }
    
     app.listen(config.port, config.hostname, function(){
